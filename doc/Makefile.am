@@ -41,7 +41,6 @@ readme.html: $(top_srcdir)/README
 readme.tex: $(top_srcdir)/README
 	$(RST2LATEX) $(RST2LATEXFLAGS) $< $@
 .tex.pdf:
-	#pdflatex $< && pdflatex $<
 	touch $<
 
 noinst_DATA = readme.html readme.pdf
