@@ -1,20 +1,19 @@
-
-/* A Bison parser, made by GNU Bison 2.4.1.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Skeleton interface for Bison GLR parsers in C
-   
-      Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-   
+
+   Copyright (C) 2002-2015 Free Software Foundation, Inc.
+
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
-   
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-   
+
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
@@ -27,55 +26,50 @@
    special exception, which will cause the skeleton and the resulting
    Bison output files to be licensed under the GNU General Public
    License without this special exception.
-   
+
    This special exception was added by the Free Software Foundation in
    version 2.2 of Bison.  */
 
-
-/* Tokens.  */
-#ifndef YYTOKENTYPE
-# define YYTOKENTYPE
-   /* Put the tokens into the symbol table, so that GDB and other debuggers
-      know about them.  */
-   enum yytokentype {
-     NUM = 258,
-     LEXER_ERROR = 259
-   };
+#ifndef YY_FSD_DT_DATETIME_TAB_H_INCLUDED
+# define YY_FSD_DT_DATETIME_TAB_H_INCLUDED
+/* Debug traces.  */
+#ifndef YYDEBUG
+# define YYDEBUG 0
+#endif
+#if YYDEBUG
+extern int fsd_dt_debug;
 #endif
 
+/* Token type.  */
+#ifndef YYTOKENTYPE
+# define YYTOKENTYPE
+  enum yytokentype
+  {
+    NUM = 258,
+    LEXER_ERROR = 259
+  };
+#endif
 
-#ifndef YYSTYPE
-typedef union YYSTYPE
+/* Value type.  */
+#if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
+
+union YYSTYPE
 {
-
-/* Line 2638 of glr.c  */
-#line 35 "datetime_tab.y"
+#line 35 "datetime_tab.y" /* glr.c:197  */
 
 	fsd_datetime_t datetime;
 	int              integer;
 
+#line 64 "datetime_tab.h" /* glr.c:197  */
+};
 
-
-/* Line 2638 of glr.c  */
-#line 61 "datetime_tab.h"
-} YYSTYPE;
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
-#endif
-
-#if ! defined YYLTYPE && ! defined YYLTYPE_IS_DECLARED
-typedef struct YYLTYPE
-{
-
-  char yydummy;
-
-} YYLTYPE;
-# define YYLTYPE_IS_DECLARED 1
-# define YYLTYPE_IS_TRIVIAL 1
+# define YYSTYPE_IS_DECLARED 1
 #endif
 
 
 
+int fsd_dt_parse (fsd_dt_parser_t *parser, fsd_dt_lexer_t *lexer);
 
-
-
-
+#endif /* !YY_FSD_DT_DATETIME_TAB_H_INCLUDED  */
